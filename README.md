@@ -1,3 +1,5 @@
+# NOTE: solution is the default branch
+
 # Vue Advanced Workshop
 
 This is the companion repository to the Vue Advanced Workshop.
