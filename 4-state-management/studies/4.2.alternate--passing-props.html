@@ -1,0 +1,36 @@
+<script src="../../node_modules/vue/dist/vue.js"></script>
+
+<div id="app">
+  <counter></counter>
+  <counter></counter>
+  <counter></counter>
+  <button @click="inc">increment</button>
+</div>
+
+<script>
+
+// This is alternative solution for 4.2
+
+const state = {
+  count: 0
+}
+
+const vm = new Vue({
+  el: '#app',
+  // data: () => ({ count: state.count }), // this won't work bc it return a diff obj
+  data: () => state,
+  components: {
+    counter: {
+      // data: () => ({ count: state.count }), // this won't work bc it return a diff obj
+      data: () => state,
+      template: `<div>{{ count }}</div>`,
+    }
+  },
+  methods: {
+    inc() {
+      state.count++
+      console.log('click', state)
+    }
+  }
+})
+</script>
