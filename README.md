@@ -1,4 +1,8 @@
 # NOTE: solution is the default branch
+This is the tutorial solution branch with my study notes
+
+-----
+
 
 # Vue Advanced Workshop
 
